@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Live Voice Word Counter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎤 Live Voice Word Counter</h1>
+            <p class="subtitle">Count words in real-time as you speak</p>
+        </header>
+
+        <div class="controls-section">
+            <div class="input-group">
+                <label for="targetWord">Target Word:</label>
+                <input type="text" id="targetWord" placeholder="Enter word to count..." value="um">
+            </div>
+            <button id="startBtn" class="btn btn-primary">
+                <span class="btn-icon">🎙️</span>
+                <span class="btn-text">Start Listening</span>
+            </button>
+        </div>
+
+        <div class="status-bar" id="statusBar">
+            <span class="status-dot"></span>
+            <span class="status-text">Ready to start</span>
+        </div>
+
+        <div class="counter-display">
+            <div class="counter-label">Word Count</div>
+            <div class="counter-value" id="counter">0</div>
+        </div>
+
+        <div class="transcript-section">
+            <h3>Live Transcript</h3>
+            <div class="transcript-box" id="transcript">
+                <p class="placeholder">Your speech will appear here...</p>
+            </div>
+        </div>
+
+        <div class="history-section">
+            <h3>Detection History</h3>
+            <div class="history-list" id="historyList">
+                <p class="placeholder">No detections yet</p>
+            </div>
+        </div>
+
+        <div class="info-section">
+            <details>
+                <summary>ℹ️ How to Use</summary>
+                <ul>
+                    <li>Enter a target word in the input field</li>
+                    <li>Click "Start Listening" and allow microphone access</li>
+                    <li>Start speaking - the counter will update in real-time</li>
+                    <li>View your live transcript and detection history below</li>
+                    <li>Click "Stop Listening" when done</li>
+                </ul>
+            </details>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
